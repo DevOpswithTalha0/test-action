@@ -4,7 +4,7 @@ on:
   branches: main
 jobs:
  test:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
    - name: adding code
      uses: actions/checkout@v4
@@ -17,7 +17,7 @@ jobs:
    - name: building code
      run:  npm test
 deploy:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
    - name: adding code
      uses: actions/checkout@v4
