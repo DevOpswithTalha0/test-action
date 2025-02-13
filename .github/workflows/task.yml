@@ -14,9 +14,10 @@ jobs:
       node-version: 18
    - name: Install dependencies
      run: npm ci
-   - name: building code
+   - name: test code
      run:  npm test
  deploy:
+  needs: test
   runs-on: ubuntu-latest
   steps:
    - name: adding code
